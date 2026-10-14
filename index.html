@@ -41,7 +41,6 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            /* Optional: Font smoothing for crisp look on all screens */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background-color: var(--bg-light);
@@ -649,10 +648,9 @@
             }
 
         .office-box {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+            display: block;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .office-card {
@@ -665,48 +663,6 @@
             align-items: center;
             gap: 14px;
         }
-
-        /* Large Image Gallery CSS */
-        .office-gallery-large {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 100%;
-        }
-
-        .office-img-large {
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--glass-border);
-            box-shadow: 0 12px 30px rgba(14, 165, 233, 0.1);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-            .office-img-large:hover {
-                transform: translateY(-5px);
-                border-color: var(--primary-blue);
-            }
-
-            .office-img-large img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-            }
-
-        .main-img {
-            height: 350px;
-        }
-
-        .office-img-large-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-            .office-img-large-grid .office-img-large {
-                height: 240px;
-            }
 
         /* Contact Section */
         .contact-box {
@@ -995,18 +951,6 @@
                     padding: 10px;
                 }
 
-            .main-img {
-                height: 280px;
-            }
-
-            .office-img-large-grid {
-                grid-template-columns: 1fr;
-            }
-
-                .office-img-large-grid .office-img-large {
-                    height: 250px;
-                }
-
             #ai-avatar-container {
                 right: 15px;
                 top: 45%;
@@ -1223,7 +1167,7 @@
                 <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Our Mission</h3>
                 <p style="font-size: 1rem;">To empower businesses by replacing outdated, rigid, and complex systems with custom, user-friendly, and perfectly tailored software solutions. We bridge the gap for entrepreneurs stuck with legacy methods or generic platforms, helping them digitize operations, eliminate daily inefficiencies, and seamlessly scale in the modern digital landscape.</p>
             </div>
-            
+
             <div class="holo-card" style="display: flex; flex-direction: column; justify-content: flex-start; padding: 35px 30px;">
                 <div class="card-icon" style="background: rgba(37, 99, 235, 0.1); color: #2563eb; border-color: rgba(37, 99, 235, 0.3); width: 60px; height: 60px; font-size: 1.6rem;">
                     <i class="fas fa-eye"></i>
@@ -1234,37 +1178,15 @@
         </div>
 
         <div class="office-box">
-            <div class="reveal-bottom">
-                <h2 class="section-heading" style="font-size: 2rem;">Our <span class="neon-text">Workspaces</span></h2>
+            <div class="reveal-bottom" style="text-align: center;">
+                <h2 class="section-heading" style="font-size: 2rem;">Our <span class="neon-text">Workspace</span></h2>
                 <p style="color: var(--text-dim); margin-bottom: 20px; line-height: 1.5; font-size: 0.95rem;">Altrasolve is dedicated to providing modern software solutions that solve complex operational problems. Our development hubs feature talented software creators and designers.</p>
 
-                <div class="office-card reveal-scale-up">
+                <div class="office-card reveal-scale-up" style="justify-content: center; text-align: left;">
                     <i class="fas fa-location-dot" style="font-size: 1.4rem; color: var(--primary-blue);"></i>
                     <div>
-                        <strong style="display: block; color: var(--text-main); font-size: 0.95rem;">Cumilla Branch:</strong>
+                        <strong style="display: block; color: var(--text-main); font-size: 0.95rem;">Cumilla Office:</strong>
                         <span style="color: var(--text-dim); font-size: 0.85rem;">London Tower, Rajgonj, Cumilla</span>
-                    </div>
-                </div>
-
-                <div class="office-card reveal-scale-up">
-                    <i class="fas fa-location-dot" style="font-size: 1.4rem; color: var(--primary-blue);"></i>
-                    <div>
-                        <strong style="display: block; color: var(--text-main); font-size: 0.95rem;">Mymensingh Branch:</strong>
-                        <span style="color: var(--text-dim); font-size: 0.85rem;">Netrakona, Mymensingh</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="office-gallery-large reveal-scale-down">
-                <div class="office-img-large main-img">
-                    <img src="discuss.svg" alt="Team Discussion" />
-                </div>
-                <div class="office-img-large-grid">
-                    <div class="office-img-large">
-                        <img src="office.svg" alt="System Scaling Meeting" />
-                    </div>
-                    <div class="office-img-large">
-                        <img src="coding.svg" alt="Developer Coding" />
                     </div>
                 </div>
             </div>
@@ -1430,7 +1352,7 @@
             "process": { text: "📈 Look at our circular infographic workflow appearing step-by-step!", iconClass: "fas fa-diagram-project" },
             "solutions": { text: "📝 Exploring custom apps, POS & E-Commerce systems!", iconClass: "fas fa-code" },
             "projects": { text: "🚀 Checking out live projects like Hossain Tea & CV Studio!", iconClass: "fas fa-rocket" },
-            "about": { text: "🏢 Built in Cumilla & Mymensingh. Engineering with trust!", iconClass: "fas fa-building" },
+            "about": { text: "🏢 Built in Cumilla. Engineering with trust!", iconClass: "fas fa-building" },
             "contact": { text: "💬 Need custom software built? Drop a message here!", iconClass: "fas fa-paper-plane" }
         };
 
